@@ -1,6 +1,6 @@
 if( $ ) {
 	$(document).ready(function(){		
-		$.get("/Midas.js?"+Math.random(), undefined, function(data) {
+		$.get("/Midas.gs?"+Math.random(), undefined, function(data) {
 			$('#midasjs').text(data);
 			hljs.initHighlighting();
 
