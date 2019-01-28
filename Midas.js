@@ -224,7 +224,8 @@ function getSpotifyArtistId(name) {
 function getSpotifyToken_() {
   //we want to use the cache here so we're not constantly fetching the auth token
   var cache = CacheService.getDocumentCache();
-  var cached = cache.get("access_token"+SPOTIFY_CLIENT_ID);
+  var cacheKey = "SPOTIFY_CLIENT_ID="+SPOTIFY_CLIENT_ID;
+  var cached = cache.get(cacheKey);
   if (cached != null) {
     return cached;
   }
@@ -241,7 +242,7 @@ function getSpotifyToken_() {
   };
   
   var json = MIDAS.fetchUrl(url, options); 
-  cache.put("access_token"+SPOTIFY_CLIENT_ID, json.access_token, 3000); // cache for 50 minutes.
+  cache.put(cacheKey, json.access_token, 3000); // cache for 50 minutes.
   return authorization;
 }
 
