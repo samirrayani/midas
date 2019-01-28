@@ -37,11 +37,27 @@ var SPOTIFY_CLIENT_SECRET = "{SPOTIFY_CLIENT_SECRET}";
 ```
 
 ### Docs
-
 After initializing the tokens above, Save the file and return back to your Google Sheet. To verify that the custom functions were correctly, try any of the custom functions below:
 
+
+#### Pandora
 - `=getPandoraTrendsetters()`
 	- Get's the latest [Pandora Trendsetters](https://www.nextbigsound.com/charts/trendsetters)
 	- returns a 2d array with `[nbs_artist_id, nbs_artist_name]`
 - ...
+
+#### Soundcloud
+- `=getSoundcloudUsername(name)`
+	- search the Soundcloud catalog for any artist in the world
+	- returns the Soundcloud username for the _first result_
+- `=getSoundcloudFollowerCount(soundcloudUsername)`
+	- number of Soundcloud followers for a given Soundcloud username
+
+#### Spotify
+- `=getSpotifyArtistId(name)`
+	- search the Spotify catalog for any artist in the world
+	- returns the Spotify artist id for the _first result_
+- `=getSpotifyArtistFollowers(spotifyArtistId)`
+	- number of Spotify followers for a given Spotify artist ID
+
 
