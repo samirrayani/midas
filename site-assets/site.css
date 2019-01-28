@@ -1,0 +1,76 @@
+body {
+	margin:25px 0;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,h7 {
+	font-family: 'Major Mono Display', monospace;
+}
+
+h5 {
+	font-size:1.5em;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+	.container{
+		width: 660px;
+	}
+}
+
+#snippet {
+	
+}
+
+#midasjs {
+	height:650px;
+}
+
+pre code {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  line-height: 1.5;
+}
+
+pre {
+	margin:0;
+	padding:0;
+}
+
+.highlight.yellow {
+  background: linear-gradient(to bottom, white 30%, rgb(252,229,162) 30%, rgb(252,229,162) 80%, white 80%);
+}
+
+.highlight.pandora {
+background: linear-gradient(to bottom, white 30%, rgba(70,158,232,.6) 30%, rgba(70,158,232,.6) 80%, white 80%);
+
+}
+
+.highlight.spotify {
+background: linear-gradient(to bottom, white 30%, rgba(106,210,111,.6) 30%, rgba(106,210,111,.6) 80%, white 80%);
+
+}
+
+.highlight.soundcloud {
+background: linear-gradient(to bottom, white 30%, rgba(237,126,48,.6) 30%, rgba(237,126,48,.6) 80%, white 80%);
+
+}
+
+.highlight.gs {
+background: linear-gradient(to bottom, white 30%, rgb(240,240,240) 30%, rgb(240,240,240) 80%, white 80%);
+
+}
+
+button.button-install {
+	margin-right: 2em;
+	color: magenta;
+	padding: 0px 10px;
+}
+
+button.button-install:hover {
+	background-color: magenta;
+	color: #fff;
+}
