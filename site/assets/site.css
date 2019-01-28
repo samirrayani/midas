@@ -68,7 +68,7 @@ button.button-install {
 	margin-right: 2em;
 	color: rgb(87,58,208);
 	padding: 0px 10px;
-	border-color: #ddd;
+	border-color: #bbb;
 }
 
 button.button-install.active, button.button-install:hover {
