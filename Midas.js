@@ -5,7 +5,6 @@
  */
 
 // [REQUIRED] Tokens
-// Learn more about getting your own tokens here: 
 var PANDORA_ACCESS_TOKEN = "{PANDORA_ACCESS_TOKEN}";
 var SOUNDCLOUD_CLIENT_ID = "{SOUNDCLOUD_CLIENT_ID}";
 var SPOTIFY_CLIENT_ID = "{SPOTIFY_CLIENT_ID}";

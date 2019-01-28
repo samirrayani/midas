@@ -1,5 +1,7 @@
 if( $ ) {
 	$(document).ready(function(){
+		new ClipboardJS('.btn');
+		
 		$.get("/Midas.js?"+Math.random(), undefined, function(data) {
 			$('#midasjs').text(data);
 			hljs.initHighlighting();
