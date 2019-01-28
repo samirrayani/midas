@@ -24,7 +24,7 @@ To use the raw source code and create or extend your own project, you'll need to
 
 Set these token values in `Midas.gs`:
 
-```
+```javascript
 // [REQUIRED] Tokens
 var PANDORA_ACCESS_TOKEN = "{PANDORA_ACCESS_TOKEN}";
 var SOUNDCLOUD_CLIENT_ID = "{SOUNDCLOUD_CLIENT_ID}";
