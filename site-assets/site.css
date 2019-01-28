@@ -41,7 +41,7 @@ pre {
 }
 
 .highlight.yellow {
-  background: linear-gradient(to bottom, white 30%, rgb(252,229,162) 30%, rgb(252,229,162) 80%, white 80%);
+  background: linear-gradient(to bottom, white 40%, rgb(252,229,162) 40%, rgb(252,229,162) 75%, white 75%);
 }
 
 .highlight.pandora {
