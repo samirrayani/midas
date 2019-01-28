@@ -2,6 +2,8 @@
 
 Midas is a suite of custom functions for accessing artist popularity data from Pandora, Spotify, & Soundcloud public APIs directly inside Google Sheets.
 
+[![alt text](https://duaw26jehqd4r.cloudfront.net/items/1O41121G0c0z3J20040W/Screen%20Shot%202019-01-28%20at%201.40.38%20PM.png)](https://vimeo.com/313719964/69a8872881 "Midas Example")
+
 ## Getting Started
 
 ### analyst mode
