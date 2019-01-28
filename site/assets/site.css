@@ -6,8 +6,14 @@ p,li {
 	font-family: 'Open Sans', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,h7 {
+h1,h2,h3,h4,h5,h6 {
 	font-family: 'Major Mono Display', monospace;
+}
+
+h6 {
+	font-size:0.8em;
+	font-style: italic;
+	margin-top:-2em;
 }
 
 h5 {
