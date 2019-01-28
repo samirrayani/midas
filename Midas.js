@@ -2,33 +2,11 @@
  * Midas is a suite of custom functions for accessing
  * data from Pandora, Spotify, & Soundcloud public APIs
  * directly inside Google Sheets
- *
- * The MIT License (MIT)
-
- * Copyright (c) 2019 Samir Rayani
-
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
-
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
-
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
  */
 
 // [REQUIRED] Tokens
 // Learn more about getting your own tokens here: 
-var NBS_ACCESS_TOKEN = "{NBS_ACCESS_TOKEN}";
+var PANDORA_ACCESS_TOKEN = "{PANDORA_ACCESS_TOKEN}";
 var SOUNDCLOUD_CLIENT_ID = "{SOUNDCLOUD_CLIENT_ID}";
 var SPOTIFY_CLIENT_ID = "{SPOTIFY_CLIENT_ID}";
 var SPOTIFY_CLIENT_SECRET = "{SPOTIFY_CLIENT_SECRET}";
@@ -38,10 +16,17 @@ var SPOTIFY_CLIENT_SECRET = "{SPOTIFY_CLIENT_SECRET}";
 // Contribute here: https://github.com/samirrayani/midas
 
 /**
- * A wrapper objected for shared methods
+ * A wrapper object for shared methods
  * (initialized below)
  */
 function Midas() {
+  /**
+   * Wrapper for UrlFetchApp.fetch()
+   * 
+   * @param {String} url
+   * @param {Object} options JavaScript object specifying advanced parameters 
+   * @return {Object} The API Response
+   */
   this.fetchUrl = function(url, options) {
     if(!options) {
       options = {};
@@ -51,13 +36,15 @@ function Midas() {
     return JSON.parse(response.getContentText());  
   };
   
+  /**
+   * Hello Midas
+   */
   this.hello = function() {
     return "Hello Midas";
   }
 }
 // initialize global MIDAS object
 var MIDAS = new Midas();
-
 
 /**
  * Get's the latest Pandora Trendsetters
@@ -67,7 +54,7 @@ var MIDAS = new Midas();
  * @customfunction
  */
 function getPandoraTrendsetters() {
-  var url = "https://api.nextbigsound.com/charts/v2/1/releases/latest/appearances?fields=items.artist.id,items.score,items.artist.name&limit=100&offset=0&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/charts/v2/1/releases/latest/appearances?fields=items.artist.id,items.score,items.artist.name&limit=100&offset=0&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
   var artists = [];
   artists.push(["NBS Artist ID", "NBS Artist Name"]);
@@ -86,7 +73,7 @@ function getPandoraTrendsetters() {
  * @customfunction
  */
 function getPandoraPredictions() {
-  var url = "https://api.nextbigsound.com/charts/v2/3/releases/latest/appearances?fields=items.artist.id,items.artist.name&limit=100&offset=0&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/charts/v2/3/releases/latest/appearances?fields=items.artist.id,items.artist.name&limit=100&offset=0&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
   var artists = [];
   artists.push(["NBS Artist ID", "NBS Artist Name"]);
@@ -105,7 +92,7 @@ function getPandoraPredictions() {
  * @customfunction
  */
 function getPandoraListenerCount(nbsId) {
-  var url = "https://api.nextbigsound.com/artists/v2/"+nbsId+"?fields=pandoraAudience&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/artists/v2/"+nbsId+"?fields=pandoraAudience&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url);   
   return json.pandoraAudience.monthlyActiveListeners.total;
 }
@@ -118,7 +105,7 @@ function getPandoraListenerCount(nbsId) {
  * @customfunction
  */
 function getPandoraStreamsCount(nbsId) {
-  var url = "https://api.nextbigsound.com/artists/v2/"+nbsId+"?fields=pandoraAudience&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/artists/v2/"+nbsId+"?fields=pandoraAudience&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
   return json.pandoraAudience.streams.total;
 }
@@ -131,7 +118,7 @@ function getPandoraStreamsCount(nbsId) {
  * @customfunction
  */
 function getPandoraLifetimeStreams(nbsId) {
-  var url = "https://api.nextbigsound.com/meta/v1/artists/"+nbsId+"?fields=totals&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/meta/v1/artists/"+nbsId+"?fields=totals&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url);  
   return json.totals.streams;
 }
@@ -144,7 +131,7 @@ function getPandoraLifetimeStreams(nbsId) {
  * @customfunction
  */
 function getPandoraArtistStationAdds(nbsId) {
-  var url = "https://api.nextbigsound.com/metrics/v1/entity/"+nbsId+"/category/awareness?metrics=412&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/metrics/v1/entity/"+nbsId+"/category/awareness?metrics=412&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
   return json.data[412].summary.LTD;
 }
@@ -157,7 +144,7 @@ function getPandoraArtistStationAdds(nbsId) {
  * @customfunction
  */
 function getNBSArtistId(name) {
-  var url = "https://api.nextbigsound.com/search/v1/artists/?limit=1&fields=id,name&query=" + name + "&access_token=" + NBS_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/search/v1/artists/?limit=1&fields=id,name&query=" + name + "&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
   return json.artists[0].id;
 }
