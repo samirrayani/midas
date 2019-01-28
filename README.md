@@ -6,11 +6,11 @@ Midas is a suite of custom functions for accessing artist popularity data from P
 
 ## Getting Started
 
-### analyst mode
+### Analyst mode
 
 [COMING SOON] The simplest way to get started is to install the Midas Google Sheet Add-on from the Chrome Web Store. If you want to extend Midas into your own existing project, read on.
 
-### developer mode
+### Developer mode
 
 To use the raw source code and create or extend your own project, you'll need to first setup your environment.
 
@@ -18,7 +18,7 @@ To use the raw source code and create or extend your own project, you'll need to
 - Open Script Editor
 - Get API Tokens from Pandora, Spotify, and Soundcloud
 
-### api Tokens
+### API Tokens
 
 - To get a Pandora Access Token (powered by Next Big Sound), please email support@nextbigsound.com
 - To get a Spotify Client ID and Token, create a new client in the [Spotify for Developers dashboard](https://developer.spotify.com/dashboard/applications)
