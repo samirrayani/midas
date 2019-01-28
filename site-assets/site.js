@@ -2,6 +2,10 @@ $(document).ready(function(){
 	$.get("/Midas.js?"+Math.random(), undefined, function(data) {
 		$('#midasjs').text(data);
 		hljs.initHighlighting();
+
+		$('code.hljs').each(function(i, block) {
+			hljs.lineNumbersBlock(block);
+		});
 	});
 
 	$.get("/LICENSE.txt?"+Math.random(), undefined, function(data) {
@@ -9,7 +13,5 @@ $(document).ready(function(){
 		hljs.initHighlighting();
 	});
 
-	$('code.hljs').each(function(i, block) {
-		hljs.lineNumbersBlock(block);
-	});
+
 });
