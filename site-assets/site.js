@@ -12,6 +12,4 @@ $(document).ready(function(){
 		$('#license').text(data);
 		hljs.initHighlighting();
 	});
-
-
 });
