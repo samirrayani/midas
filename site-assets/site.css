@@ -35,10 +35,6 @@ pre code {
   line-height: 1.5;
 }
 
-pre {
-	margin:0;
-	padding:0;
-}
 
 .highlight.yellow {
   background: linear-gradient(to bottom, white 40%, rgb(252,229,162) 40%, rgb(252,229,162) 75%, white 75%);
@@ -74,3 +70,28 @@ button.button-install:hover {
 	background-color: magenta;
 	color: #fff;
 }
+
+.hljs-line-numbers {
+	text-align: right;
+	border-right: 1px solid #ccc;
+	color: #999;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+td.hljs-ln-code {
+	border: 0px;
+}
+
+td.hljs-ln-numbers {
+	border:0px;
+	color: #555;
+}
+
+
+
+.hljs-comment,.hljs-quote{color:#969896}.hljs-variable,.hljs-template-variable,.hljs-tag,.hljs-name,.hljs-selector-id,.hljs-selector-class,.hljs-regexp,.hljs-deletion{color:#cc6666}.hljs-number,.hljs-built_in,.hljs-builtin-name,.hljs-literal,.hljs-type,.hljs-params,.hljs-meta,.hljs-link{color:#de935f}.hljs-attribute{color:#f0c674}.hljs-string,.hljs-symbol,.hljs-bullet,.hljs-addition{color:#b5bd68}.hljs-title,.hljs-section{color:#81a2be}.hljs-keyword,.hljs-selector-tag{color:#b294bb}.hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:0.5em}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
