@@ -99,33 +99,8 @@ ol,ul {
 	padding-left:1.75em;
 }
 
-pre.link {
-	float:left;
-	width:200px;
-	text-align:left;
-	padding-left:.5em;
-	margin-bottom:-1em
-}
-
-pre.link a {
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-pre.link.right {
-	text-align:right;
-	float:right;
-	padding-right:.5em;
-}
 
 #snippet {
-	margin-bottom:-2.5em
-	display:block;
-}
-
-#snippetLinks {
-	width:100%;
-	height:.5em;
 	display:block;
 }
 
