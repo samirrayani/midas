@@ -3,7 +3,7 @@ $(document).ready(function(){
 		$('#midasjs').text(data);
 		hljs.initHighlighting();
 
-		$('code.hljs').each(function(i, block) {
+		$('#midasjs').each(function(i, block) {
 			hljs.lineNumbersBlock(block);
 		});
 	});
