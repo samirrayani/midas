@@ -24,8 +24,12 @@ h5 {
 
 @media only screen and (min-width: 1000px) {
 	.container{
-		width: 660px;
+		width: 700px;
 	}
+}
+
+table code {
+	font-size:110%;
 }
 
 
