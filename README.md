@@ -8,7 +8,7 @@ Midas is a suite of custom functions for accessing artist popularity data from P
 
 ### Analyst Mode
 
-[COMING SOON] The simplest way to get started is to install the Midas Google Sheet Add-on from the Chrome Web Store. If you want to extend Midas into your own existing project, read on.
+The simplest way to get started is to install the Midas Google Sheet Add-on from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj). If you want to extend Midas into your own existing project, read on.
 
 ### Developer Mode
 
@@ -40,24 +40,16 @@ var SPOTIFY_CLIENT_SECRET = "{SPOTIFY_CLIENT_SECRET}";
 After initializing the tokens above, Save the file and return back to your Google Sheet. To verify that the custom functions were correctly, try any of the custom functions below:
 
 
-#### Pandora
-- `=getPandoraTrendsetters()`
-	- Get's the latest [Pandora Trendsetters](https://www.nextbigsound.com/charts/trendsetters)
-	- returns a 2d array with `[nbs_artist_id, nbs_artist_name]`
-- ...
-
-#### Soundcloud
-- `=getSoundcloudUsername(name)`
-	- search the Soundcloud catalog for any artist in the world
-	- returns the Soundcloud username for the _first result_
-- `=getSoundcloudFollowerCount(soundcloudUsername)`
-	- number of Soundcloud followers for a given Soundcloud username
-
-#### Spotify
-- `=getSpotifyArtistId(name)`
-	- search the Spotify catalog for any artist in the world
-	- returns the Spotify artist id for the _first result_
-- `=getSpotifyArtistFollowers(spotifyArtistId)`
-	- number of Spotify followers for a given Spotify artist ID
-
-
+|Function|Description|
+|--- |--- |
+|`=getPandoraTrendsetters()`|Get the latest Pandora Trendsetters Chart and returns a 2d array with `[nbsId, nbs_artist_name]`|
+|`=getPandoraPredictions()`|Get the latest Pandora Predictions Chart and returns a 2d array with `[nbsId, nbs_artist_name]`|
+|`=getPandoraListenerCount(nbsId)`|Get the number of Pandora monthly active listeners (28 days) for a given nbs artist id|
+|`=getPandoraStreamsCount(nbsId)`|Get the number of Pandora monthly streams (28 days) for a given nbs artist id|
+|`=getPandoraLifetimeStreams(nbsId)`|Get the number of Pandora lifetime streams for a given nbs artist id|
+|`=getPandoraArtistStationAdds(nbsId)`|Get the number of total Pandora artist stations for a given nbs artist id|
+|`=getNBSArtistId(name)`|Find the first NBS Artist ID for a given artist name|
+|`=getSoundcloudUsername(name)`|Find the first Soundcloud username for a given artist name|
+|`=getSoundcloudFollowerCount(soundcloudUsername)`|Get the number of Soundcloud followers for a given Soundcloud username|
+|`=getSpotifyArtistId(name)`|Find the first Spotify artistID for a given artist name|
+|`=getSpotifyArtistFollowers(spotifyArtistId)`|Get the number of Spotify followers for a given spotify artist ID|
