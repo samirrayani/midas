@@ -1,9 +1,11 @@
 body {
 	margin:25px 0;
+	overflow-x: hidden;
 }
 
 p,li {
 	font-family: 'Open Sans', sans-serif;
+	text-align:justify-all;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,15 +26,9 @@ h5 {
 
 @media only screen and (min-width: 1000px) {
 	.container{
-		width: 700px;
+		width: 640px;
 	}
 }
-
-table code {
-	font-size:110%;
-}
-
-
 
 #midasjs {
 	height:650px;
@@ -42,6 +38,15 @@ pre code {
   font-family: Menlo, Monaco, Consolas, monospace;
   line-height: 1.5;
 }
+
+code {
+	font-size:130%;
+}
+
+code.hljs {
+	font-size:90%;
+}
+
 
 
 .highlight.yellow {
