@@ -80,6 +80,22 @@ button.button-install {
 	border-color: #bbb;
 }
 
+button.button-template {
+	margin-right: 2em;
+	background-color: rgb(30,157,91);
+	padding: 0px 10px;
+	border-color: rgb(30,157,91);
+	color: #fff;
+}
+
+button.button-template.active, button.button-template:hover {
+	margin-right: 2em;
+	background-color: rgb(44,164,103);
+	padding: 0px 10px;
+	border-color: rgb(44,164,103);
+	color: #fff;
+}
+
 button.button-install.active, button.button-install:hover {
 	background-color: rgb(87,58,208);
 	color: #fff;

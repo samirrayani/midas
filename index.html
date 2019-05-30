@@ -77,7 +77,7 @@
 				</h5>
 				<p>
 				<a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj"><button class="button button-install active">install add-on</button></a>
-				<a href="https://github.com/samirrayani/midas"><button class="button button-install">view source</button></a>
+				<a href="https://github.com/samirrayani/midas/blob/master/README.md#docs"><button class="button button-install">view documentation</button></a>
 			</p>
 				<p>
 						<iframe 
@@ -103,7 +103,7 @@
 					Midas is a free <a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj">Google Sheet Add-on</a> that gives music industry professionals access to realtime popularity data from Pandora, Spotify, and Soundcloud (<a href="https://github.com/samirrayani/midas/issues">request more services here</a>).
 				</p>
 				<p>
-					Google Sheets already offers hundreds of built-in functions like <code>=AVERAGE</code>, <code>=SUM</code>, or <code>=VLOOKUP</code>. After installing the add-on you will have access to <a href="#documentation">dozens more</a> — say, to pull-in Soundcloud followers for any artist in the world — to use directly inside Google Sheets like a built-in function. You can learn more about <a href="https://developers.google.com/apps-script/guides/sheets/functions">Google Custom Functions here</a>
+					Google Sheets already offers hundreds of built-in functions like <code>=AVERAGE</code>, <code>=SUM</code>, or <code>=VLOOKUP</code>. After installing the add-on you will have access to dozens more — say, to pull-in Soundcloud followers for any artist in the world — to use directly inside Google Sheets like a built-in function. You can learn more about <a href="https://developers.google.com/apps-script/guides/sheets/functions">Google Custom Functions here</a>
 				</p>
 				<p>
 					<img width="640" src="/site/assets/images/getsoundcloudfollowers.png">
@@ -121,94 +121,30 @@
 				</p>
 
 				<p>
-					
+					Midas is built on top of the hard work of hundreds of people at Pandora, Spotify, and Soundcloud. To learn more about the APIs used by Midas, <a href="https://github.com/samirrayani/midas">view the source code on Github</a>.
 				</p>
-
-				<p>
-					Midas is built on top of the hard work of hundreds of people at Pandora, Spotify, and Soundcloud. This would not be possible without the awesome and robust API's they provide. To learn more about the APIs used by Midas, view the <a href="https://github.com/samirrayani/midas">source code on Github</a>.
-				</p>
-
-
 				
 			</div>
 		</div>
 
-		<div class="row no-mobile">
-			<div class="column">
-
-				<h4 id="documentation"><span class="highlight yellow">DOCumEnTATIOn</span></h4>
-				
-				<table class="u-full-width">
-					<thead>
-						<tr>
-						  <th>Function</th>
-						  <th>Description</th>
-						  <!-- <th>Return Type</th> -->
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-						  <td><code>=getPandoraTrendsetters()</code></td>
-						  <td>Get the latest <a href="https://www.nextbigsound.com/charts/trendsetters" target="_blank">Pandora Trendsetters Chart</a> and returns a 2d array with <code>[nbsId, nbs_artist_name]</code></td>
-						  <!-- <td>List</td> -->
-						</tr>
-						<tr>
-							<td><code>=getPandoraPredictions()</code></td>
-							<td>Get the latest <a href="https://www.nextbigsound.com/charts/predictions" target="_blank">Pandora Predictions Chart</a> and returns a 2d array with <code>[nbsId, nbs_artist_name]</code></td>
-							<!-- <td>List</td> -->
-						</tr>
-						<tr>
-							<td><code>=getPandoraListenerCount(nbsId)</code></td>
-							<td>Get the number of Pandora monthly active listeners (28 days) for a given nbs artist id</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getPandoraStreamsCount(nbsId)</code></td>
-							<td>Get the number of Pandora monthly streams (28 days) for a given nbs artist id</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getPandoraLifetimeStreams(nbsId)</code></td>
-							<td>Get the number of Pandora lifetime streams for a given nbs artist id</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getPandoraArtistStationAdds(nbsId)</code></td>
-							<td>Get the number of total Pandora artist stations for a given nbs artist id</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getNBSArtistId(name)</code></td>
-							<td>Find the first NBS Artist ID for a given artist name</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getSoundcloudUsername(name)</code></td>
-							<td>Find the first Soundcloud username for a given artist name</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getSoundcloudFollowerCount(soundcloudUsername)</code></td>
-							<td>Get the number of Soundcloud followers for a given Soundcloud username</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getSpotifyArtistId(name)</code></td>
-							<td>Find the first Spotify artistID for a given artist name</td>
-							<!-- <td>Number</td> -->
-						</tr>
-						<tr>
-							<td><code>=getSpotifyArtistFollowers(spotifyArtistId)</code></td>
-							<td>Get the number of Spotify followers for a given spotify artist ID</td>
-							<!-- <td>Number</td> -->
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
 		<div class="row">
 			<div class="column">
-				<h4>SOURCE <span class="highlight yellow">CODE</span></h4>
+				<h4 id=""><span class="highlight yellow">TEMPLATES</span></h4>
+				<p>
+					Templates are sheets with pre-populated Midas functions. Please submit all <a href="https://github.com/samirrayani/midas/issues">template requests here</a>. To use these templates, you must first install the add-on from the <a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj">Google Sheet Add-On Store</a>. 
+				</p>
+				<p>
+					<a href="https://docs.google.com/spreadsheets/d/1PwCaGfC6TVdXsCfl1lLmIKZvoDFLdbqk5uZsreFj9yE/edit#gid=1990936207"><button class="button button-template">view templates</button></a>
+				</p>
+				<p>
+					*the template will only load correctly after you have installed the add-on and chosen to use Midas in the document from the <a href="https://support.google.com/docs/answer/2942256?co=GENIE.Platform%3DDesktop&hl=en">Add-On Manager</a>.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<h4><span class="highlight yellow">SOURCE CODE</span></h4>
 				<p>
 					Midas is 100% free and open source. Please submit all feature requests and issues <a href="https://github.com/samirrayani/midas/issues">here</a>.
 				</p>
@@ -217,7 +153,7 @@
 					</code>
 				</pre>
 			
-				<h4>LICENSE</h4>
+				<h4><span class="highlight yellow">LICENSE</span></h4>
 				<pre>
 					<code class="hljs text" id="license">
 					</code>
