@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133316141-1"></script>
 <script>
@@ -48,36 +49,72 @@
 			<div class="column">
 				<h1><span class="highlight yellow">MIDAs</span></h1>
 				<h6><span class="highlight gs">music industry data analysis scripts</span></h6>
-				<h5>midas is a suite of <span class="highlight gs">=Custom_Functions()</span> for accessing artist popularity data from <span class="highlight pandora">Pandora</span>, <span class="highlight spotify">Spotify</span>, & <span class="highlight soundcloud">Soundcloud</span> directly inside <span class="highlight gs">google Sheets</span></h5>
-					<a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj"><button class="button button-install active">install add-on</button></a>
-
-					<a href="https://github.com/samirrayani/midas"><button class="button button-install">view source</button></a>
-				</p>
-
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="column">
+				<h5>
+					midas is a suite of <span class="highlight gs">=Custom_Functions()</span> for accessing artist popularity data from <span class="highlight pandora">Pandora</span>, <span class="highlight spotify">Spotify</span>, & <span class="highlight soundcloud">Soundcloud</span> directly inside <span class="highlight gs">google Sheets</span>
+				</h5>
 				<p>
-					<iframe 
-						src="https://player.vimeo.com/video/313719964?autoplay=1&loop=1" 
-						width="640" 
-						height="400" 
-						frameborder="0" 
-						webkitallowfullscreen 
-						mozallowfullscreen 
-						allowfullscreen
-						allow="autoplay; fullscreen"
-						></iframe>
-
+				<a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj"><button class="button button-install active">install add-on</button></a>
+				<a href="https://github.com/samirrayani/midas"><button class="button button-install">view source</button></a>
+			</p>
+				<p>
+						<iframe 
+							src="https://player.vimeo.com/video/313719964?autoplay=1&loop=1" 
+							width="640" 
+							height="400" 
+							frameborder="0" 
+							webkitallowfullscreen 
+							mozallowfullscreen 
+							allowfullscreen
+							allow="autoplay; fullscreen"
+							></iframe>
+	
+	
+					</p>
+			</div>
+		</div>
+				
+		<div class="row">
+			<div class="column">
+				<h4 id=""><span class="highlight yellow">ABOUT</span></h4>
+				<p>
+					Midas is a free <a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj">Google Sheet Add-on</a> that gives music industry professionals access to realtime popularity data from Pandora, Spotify, and Soundcloud (<a href="https://github.com/samirrayani/midas/issues">request more services here</a>).
+				</p>
+				<p>
+					Google Sheets already offers hundreds of built-in functions like <code>=AVERAGE</code>, <code>=SUM</code>, or <code>=VLOOKUP</code>. After installing the add-on you will have access to <a href="#documentation">dozens more</a> — say, to pull-in Soundcloud followers for any artist in the world — to use directly inside Google Sheets like a built-in function. You can learn more about <a href="https://developers.google.com/apps-script/guides/sheets/functions">Google Custom Functions here</a>
+				</p>
+				<p>
+					<img width="640" src="/site/assets/images/getsoundcloudfollowers.png">
+				</p>
+				<p>
+					Midas was developed by <a href="https://twitter.com/samirrayani">Samir Rayani</a> while teaching a workshop-styled lecture for students at <a href="https://steinhardt.nyu.edu/music/business/masters/curriculum">New York University</a> and the <a href="https://online.berklee.edu/school/course/data-analytics-in-the-music-business?=&program=music_business&course_item_id=57744315&page=&tab=&preview_p=0&usca_p=t">Berklee College of Music</a>. The lecture introduces concepts such as data retrieval, data cleaning, APIs, and producing insights at scale. During the interactive workshop, students create their own custom functions in a fully operational Google Sheet that pulls data from external streaming and social services. In March 2019, the code from the workshop was used to create Midas, now available to anyone, in the <a href="https://chrome.google.com/webstore/detail/midas/lidofomciddoicapheahmbnjmoajogjj">Google Sheet Add-On Store</a>.
 
 				</p>
+				
+				<p>
+					To date, more than 200 students have gone through the workshop. These are the <a href="https://docs.google.com/presentation/d/1Qp4b1gu29EtDz1ORIh9GBUYQDh4tIy6XCUZZaJq5lBU/edit#slide=id.g16b9e5e225_0_533">slides</a> from the most recent lecture:
+				</p>
+				<p>
+					<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ2R7fzzcqCfHgFkqrBoBjyTZBCbfXy0AWNZHCoFw9Jq2097AuopaFbakBU0MEpGiJRJsGNCyNDUbIf/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				</p>
+
+				<p>
+					
+				</p>
+
+				<p>
+					Midas is built on top of the hard work of hundreds of people at Pandora, Spotify, and Soundcloud. This would not be possible without the awesome and robust API's they provide. To learn more about the APIs used by Midas, view the <a href="https://github.com/samirrayani/midas">source code on Github</a>.
+				</p>
+
+
 				
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row no-mobile">
 			<div class="column">
 
 				<h4 id="documentation"><span class="highlight yellow">DOCumEnTATIOn</span></h4>
@@ -148,7 +185,10 @@
 						</tr>
 					</tbody>
 				</table>
-
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
 				<h4>SOURCE <span class="highlight yellow">CODE</span></h4>
 				<p>
 					Midas is 100% free and open source. Please submit all feature requests and issues <a href="https://github.com/samirrayani/midas/issues">here</a>.
