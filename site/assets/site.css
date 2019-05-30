@@ -19,9 +19,9 @@ h1 {
 }
 
 h6 {
-	font-size:.9em;
+	font-size:1.2em;
 	font-style: italic;
-	margin-top:-2em;
+	margin-top:-1.5em;
 }
 
 h4 {
@@ -81,6 +81,10 @@ background: linear-gradient(to bottom, white 30%, rgba(237,126,48,.6) 30%, rgba(
 .highlight.gs {
 background: linear-gradient(to bottom, white 30%, rgb(240,240,240) 30%, rgb(240,240,240) 80%, white 80%);
 
+}
+
+.highlight.purple {
+	background: linear-gradient(to bottom, white 30%, rgb(232,231,251) 30%, rgb(232,231,251) 80%, white 80%);
 }
 
 button.button-install {
