@@ -11,12 +11,9 @@ Why do I keep seeing #ERROR! in some cells?
 Why do I keep seeing "Unknown function"?
 
 
-# Templates
-https://docs.google.com/spreadsheets/d/1PwCaGfC6TVdXsCfl1lLmIKZvoDFLdbqk5uZsreFj9yE/edit#gid=0
+# FORMAT PROPOSAL
 
-
-# Function Format Proposal?
-
+```
 =MIDAS('getPandoraTrendsetters', [input ])
 
 vs
@@ -26,3 +23,4 @@ vs
 vs 
 
 =MIDAS_getPandoraTrendsetters([input ]);
+```
