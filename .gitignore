@@ -3,3 +3,4 @@ local-build.sh
 .DS_Store
 .claspignore
 appsscript.json
+env/*
