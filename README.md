@@ -34,7 +34,7 @@ var SPOTIFY_CLIENT_SECRET = "{SPOTIFY_CLIENT_SECRET}";
 ```
 
 ### Docs
-After initializing the tokens above, Save the file and return back to your Google Sheet. To verify that the custom functions were correctly, try any of the custom functions below:
+After initializing the tokens above, Save the file and return back to your Google Sheet. To verify that the custom functions were correctly installed, try any of the custom functions below:
 
 
 |Function|Description|
