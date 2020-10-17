@@ -306,7 +306,7 @@ function getSpotifyToken_() {
   
   var json = MIDAS.fetchUrl(url, options); 
   cache.put(cacheKey, json.access_token, 3000); // cache for 50 minutes.
-  return authorization;
+  return json.access_token;
 }
 
 // [END Midas]
