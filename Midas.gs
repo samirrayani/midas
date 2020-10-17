@@ -130,10 +130,11 @@ function getPandoraLifetimeStreams(nbsId) {
  * @customfunction
  */
 function getPandoraArtistStationAdds(nbsId) {
-  var url = "https://api.nextbigsound.com/metrics/v1/entity/"+nbsId+"/category/awareness?metrics=412&access_token=" + PANDORA_ACCESS_TOKEN;
+  var url = "https://api.nextbigsound.com/artists/v2/"+nbsId+"?fields=pandoraArtistMetrics&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
-  return json.data[412].summary.LTD;
+  return json.pandoraArtistMetrics.data[412].summary.LTD;
 }
+
 
 /**
  * Get's the first NBS Artist ID for a given artist name
@@ -145,7 +146,7 @@ function getPandoraArtistStationAdds(nbsId) {
 function getNBSArtistId(name) {
   var url = "https://api.nextbigsound.com/search/v1/artists/?limit=1&fields=id,name&query=" + name + "&access_token=" + PANDORA_ACCESS_TOKEN;
   var json = MIDAS.fetchUrl(url); 
-  return json.artists[0].id;
+  return json.items[0].id;
 }
 
 /**
@@ -193,6 +194,68 @@ function getSpotifyArtistFollowers(spotifyArtistId) {
   
   var json = MIDAS.fetchUrl(url, options); 
   return json.followers.total;
+}
+
+/**
+ * Get's the Top Tracks for a given spotify artist ID
+ *
+ * @param {String} spotifyArtistId The Spotify Artist ID we want to fetch data for.
+ * @return {Array} The Top Tracks
+ * @customfunction
+ */
+function getSpotifyArtistTopTracks(spotifyArtistId, market) {
+
+  if(!market) {
+    market = "US";
+  }
+
+  var access_token = getSpotifyToken();
+  
+  var url = "https://api.spotify.com/v1/artists/" + spotifyArtistId + "/top-tracks?market=" + market;
+  var options = {
+    contentType: "application/x-www-form-urlencoded",
+    headers: { "Authorization": "Bearer " + access_token },
+    muteHttpExceptions: true
+  };
+  
+  Utilities.sleep(Math.random()*500);
+  var response = UrlFetchApp.fetch(url, options);
+  var json = JSON.parse(response.getContentText());
+  
+  var tracks = [["Track ID", "Track Name", "Popularity"]];
+  
+  for(var i=0; i<json.tracks.length; i++) {
+    tracks.push([json.tracks[i].id, json.tracks[i].name, json.tracks[i].popularity]);
+  }
+  
+  
+  
+  return tracks;
+}
+
+/**
+ * Get's the "popularity" for a given spotify artist ID
+ *
+ * @param {String} spotifyArtistId The Spotify Artist ID we want to fetch data for.
+ * @return {Number} The popularity metric
+ * @customfunction
+ */
+function getSpotifyArtistPopularity(spotifyArtistId) {
+  var json = fetchSpotifyData(spotifyArtistId);
+  return json.popularity;
+}
+
+
+/**
+ * Get's the Image URL for a given spotify artist ID
+ *
+ * @param {String} spotifyArtistId The Spotify Artist ID we want to fetch data for.
+ * @return {String} The image URL
+ * @customfunction
+ */
+function getSpotifyArtistImage(spotifyArtistId) {
+  var json = fetchSpotifyData(spotifyArtistId);
+  return json.images[0].url;
 }
 
 /**
